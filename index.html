@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemons Render</title>
+    <link rel="stylesheet" href="./main.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-stone-900">
+
+    <section class="filter-section">
+        <h1 class="text-3xl text-white font-bold text-center my-9">Pokemons</h1>
+        <form class="search-input-form max-w-[1200px] w-full m-auto flex justify-center gap-2">
+            <input class="search-input w-[300px] p-2 pl-4 rounded-lg outline-none focus:shadow-inner placeholder:text-stone-700" type="search" placeholder="Search movie" aria-label="search movie">
+            <select class="js-sorted-select outline-none p-2 rounded-lg">
+                <option value="filter" class="bg-stone-900 text-white">Sorted by</option>
+                <option value="a-z" class="bg-sky-200">A-Z</option>
+                <option value="z-a" class="bg-sky-200">Z-A</option>
+                <option value="lowest-candy highest-candy" class="bg-sky-200">lowest candy to higest</option>
+                <option value="highest-candy lowest-candy" class="bg-sky-200">highest candy to lowest</option>
+                <option value="lowest-egg" class="bg-sky-200">lowest egg to highest</option>
+                <option value="highest-egg" class="bg-sky-200">highest egg to lowest</option>
+            </select>
+            <select id="weaknesses-option" class=" outline-none p-2 rounded-lg">
+                <option value="all">All</option>
+            </select>
+            <input class="js-minWeight-input p-[6px] pl-3 rounded-lg placeholder:text-stone-700 outline-none"  type="number" placeholder="Min weight" aria-label="enter minimum year">
+            <input class="js-maxWeight-input p-[6px] pl-3 rounded-lg placeholder:text-stone-700 outline-none"  type="number" placeholder="Max weight" aria-label="enter maximum year">
+            <button class="search-button p-2 bg-sky-700 text-white border-none rounded-lg" type="submit">Search</button>
+        </form>
+    </section>
+
+    <ul class="js-pokemons-list flex flex-wrap gap-[20px] w-[1100px] m-auto pt-[30px]">
+   
+    </ul>
+
+
+    <template class="js-pokemons-template">
+        <li class="list-none inline-flex flex-col items-center bg-sky-900 rounded-xl">
+            <span class="poke-number ml-[160px] bg-yellow-400 p-2 rounded-bl-xl rounded-tr-[11px]">001</span>
+            <img class="poke-img w-[200px] h-[120px] object-contain mt-[40px]" src="http://www.serebii.net/pokemongo/pokemon/001.png" alt="">
+            <strong class="poke-name text-white text-center text-2xl font-bold mb-2">Bulbasar</strong>
+            <div class="flex flex-col items-start bg-stone-600 w-[202px] h-[170px] p-2 rounded-b-[11px]">
+                <p class="poke-weight text-white text-[18px]">6.9 kg</p>
+                <p class="poke-candy-count text-white text-[18px]">  25</p>
+                <p class="poke-egg text-white text-[18px]"></p>
+                <p class="poke-weakness text-white text-[18px]">Grass, Poison</p>
+            </div>
+        </li>
+    </template>
+
+ 
+
+ 
+
+
+
+
+
+    <script src="./pokemons.js"></script>
+    <script src="./main.js"></script>
+    
+</body>
+</html>
